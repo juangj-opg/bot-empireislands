@@ -24,7 +24,7 @@ client.on("message", function(message) {
   			.setDescription("Estos son los comandos del bot de Empire Islands:")
   			.addField("ei!help", "Podrás ver los comandos de este bot.")
   			.addField("ei!discord", "Podrás crear un enlace temporal para invitar gente.")
-  			.addField("ei!servidor", "Podrás consultar los servidores que están actualmente activos.")
+  			.addField("ei!servidor", "Podrás consultar los servidores que están actualmente activos.") 
   			.addField("ei!tienda", "Podrás consultar los vips u otros pagos del servidor.");
         message.channel.send(Embed);
   		break;
@@ -43,7 +43,7 @@ client.on("message", function(message) {
   			.setColor(0xFF8000)
   			.setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
   			.setDescription("Actualizado del día 08/12/2020:")
-  			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión:1.12.2\nNº de mods:tal\nIP:tal');
+  			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión:1.12.2\nNº de mods:221 \nIP:sky.empireislands.es');
   			message.channel.send(Embed3);
   		break;
       case "tienda":
@@ -51,11 +51,24 @@ client.on("message", function(message) {
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-        .setDescription("Actualizado del día 08/12/2020:")
+        .setDescription("Actualizado del día 08/12/2020:\nRecuerda que si vas a hacer un pago, hazlo dentro del servidor para evitar fallos.")
         .addField("Skyblock", '3 Vips, 3€ / 5€ / 9€.\nLink: https://empskyislands.enjin.com/');
         message.channel.send(Embed4);
       break;
+      case "launcher":
+        const Embed5 = new Discord.MessageEmbed()
+        .setTitle("Empire Islands")
+        .setColor(0xFF8000)
+        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+        .setDescription("Descarga aquí el Launcher que necesites\nSi surge algún fallo puedes decirlo en general e intentaremos solucionarlo.")
+        .addField("Technic Premium", 'Launcher de Technic para los usuarios premium.\nLink: https://empskyislands.enjin.com/')
+        .addField("Technic No Premium", 'Launcher de Technic para los usuarios no premium.\nLink: https://empskyislands.enjin.com/')
+        .addField("Its mine now", "Add DiscordBot to your server! [Click here](https://discordapp.com/oauth2/authorize?client_id=439778986050977792&scope=bot&permissions=8)");
+        message.channel.send(Embed5);
+      break;
   	}
+    //launcher - que redireccione al launcher premium y no premium
+    //reglas - mas o menos, poner todas las reglas,x
 
   	/*if (command === "help") {
     	message.channel.send('```Hola```');                    
