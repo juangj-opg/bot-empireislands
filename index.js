@@ -26,7 +26,8 @@ client.on("message", function(message) {
   			.addField("ei!discord", "Podrás crear un enlace temporal para invitar gente.")
   			.addField("ei!servidor", "Podrás consultar los servidores que están actualmente activos.") 
   			.addField("ei!tienda", "Podrás consultar los vips u otros pagos del servidor.")
-        .addField("ei!launcher", "Podrás ver los launchers que usamos para Empire Islands.");
+        .addField("ei!launcher", "Podrás ver los launchers que usamos para Empire Islands.")
+        .setTimestamp();
         message.channel.send(Embed);
   		break;
   		case "discord":
@@ -35,7 +36,8 @@ client.on("message", function(message) {
   			.setColor(0xFF8000)
   			.setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
   			.setDescription("Para invitar a alguien tienes que acceder al siguiente enlace:")
-  			.addField("https://discord.me/empireislandsnet", 'Al entrar, dale a la pestaña "Join Server", te redireccionará a otra página web en la que confirmas que no eres un robot y tendrás tu enlace para invitar a quien quieras.');
+  			.addField("https://discord.me/empireislandsnet", 'Al entrar, dale a la pestaña "Join Server", te redireccionará a otra página web en la que confirmas que no eres un robot y tendrás tu enlace para invitar a quien quieras.')
+        .setTimestamp();
   			message.channel.send(Embed2);
   		break;
   		case "servidor":
@@ -44,7 +46,8 @@ client.on("message", function(message) {
   			.setColor(0xFF8000)
   			.setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
   			.setDescription("Actualizado del día 08/12/2020:")
-  			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión:1.12.2\nNº de mods:221 \nIP:sky.empireislands.es');
+  			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión:1.12.2\nNº de mods:221 \nIP:sky.empireislands.es')
+        .setTimestamp();
   			message.channel.send(Embed3);
   		break;
       case "tienda":
@@ -53,7 +56,8 @@ client.on("message", function(message) {
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
         .setDescription("Actualizado del día 08/12/2020:\nRecuerda que si vas a hacer un pago, hazlo dentro del servidor para evitar fallos.")
-        .addField("Skyblock", '3 Vips, 3€ / 5€ / 9€.\nLink: https://empskyislands.enjin.com/');
+        .addField("Skyblock", '3 Vips, 3€ / 5€ / 9€.\nLink: https://empskyislands.enjin.com/')
+        .setTimestamp();
         message.channel.send(Embed4);
       break;
       case "launcher":
@@ -63,11 +67,11 @@ client.on("message", function(message) {
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
         .setDescription("Descarga aquí el Launcher que necesites\nSi surge algún fallo puedes decirlo en general e intentaremos solucionarlo.")
         .addField("Technic Premium", 'Launcher de Technic para los usuarios premium.\nLink: [MEGA](https://mega.nz/file/0slDCSTA#a2yhamMYmO57AyqmxzEz4EYOszTuesOta9x7U4J_Ack)')
-        .addField("Technic No Premium", 'Launcher de Technic para los usuarios no premium.\nLink: [MEGA](https://mega.nz/file/Mh1CUARL#0bS9SN4O9mzU8vHkgXo6qC9XTgVUJ48IUE29HIS9wkE)');
+        .addField("Technic No Premium", 'Launcher de Technic para los usuarios no premium.\nLink: [MEGA](https://mega.nz/file/Mh1CUARL#0bS9SN4O9mzU8vHkgXo6qC9XTgVUJ48IUE29HIS9wkE)')
+        .setTimestamp();
         message.channel.send(Embed5);
       break;
-  	}
-    //launcher - que redireccione al launcher premium y no premium
+  	} 
     //reglas - mas o menos, poner todas las reglas,x
 
   	/*if (command === "help") {
