@@ -46,7 +46,7 @@ client.on("message", function(message) {
   			.setColor(0xFF8000)
   			.setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
   			.setDescription("Actualizado del día 08/12/2020:")
-  			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión:1.12.2\nNº de mods:221 \nIP:sky.empireislands.es')
+  			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión: 1.12.2\n Nº de mods:221 \nIP: sky.empireislands.es')
         .setTimestamp();
   			message.channel.send(Embed3);
   		break;
