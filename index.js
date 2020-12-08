@@ -25,7 +25,8 @@ client.on("message", function(message) {
   			.addField("ei!help", "Podrás ver los comandos de este bot.")
   			.addField("ei!discord", "Podrás crear un enlace temporal para invitar gente.")
   			.addField("ei!servidor", "Podrás consultar los servidores que están actualmente activos.") 
-  			.addField("ei!tienda", "Podrás consultar los vips u otros pagos del servidor.");
+  			.addField("ei!tienda", "Podrás consultar los vips u otros pagos del servidor.")
+        .addField("ei!launcher", "Podrás ver los launchers que usamos para Empire Islands.");
         message.channel.send(Embed);
   		break;
   		case "discord":
@@ -61,9 +62,8 @@ client.on("message", function(message) {
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
         .setDescription("Descarga aquí el Launcher que necesites\nSi surge algún fallo puedes decirlo en general e intentaremos solucionarlo.")
-        .addField("Technic Premium", 'Launcher de Technic para los usuarios premium.\nLink: https://empskyislands.enjin.com/')
-        .addField("Technic No Premium", 'Launcher de Technic para los usuarios no premium.\nLink: https://empskyislands.enjin.com/')
-        .addField("Its mine now", "Add DiscordBot to your server! [Click here](https://discordapp.com/oauth2/authorize?client_id=439778986050977792&scope=bot&permissions=8)");
+        .addField("Technic Premium", 'Launcher de Technic para los usuarios premium.\nLink: [MEGA](https://mega.nz/file/0slDCSTA#a2yhamMYmO57AyqmxzEz4EYOszTuesOta9x7U4J_Ack)')
+        .addField("Technic No Premium", 'Launcher de Technic para los usuarios no premium.\nLink: [MEGA](https://mega.nz/file/Mh1CUARL#0bS9SN4O9mzU8vHkgXo6qC9XTgVUJ48IUE29HIS9wkE)');
         message.channel.send(Embed5);
       break;
   	}
