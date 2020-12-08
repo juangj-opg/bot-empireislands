@@ -25,7 +25,8 @@ client.on("message", function(message) {
   			.addField("ei!help", "Podrás ver los comandos de este bot.")
   			.addField("ei!discord", "Podrás crear un enlace temporal para invitar gente.")
   			.addField("ei!servidor", "Podrás consultar los servidores que están actualmente activos.");
-  			message.channel.send(Embed);
+  			.addField("ei!tienda", "Podrás consultar los vips u otros pagos del servidor.");
+        message.channel.send(Embed);
   		break;
   		case "discord":
   			const Embed2 = new Discord.MessageEmbed()
@@ -45,6 +46,15 @@ client.on("message", function(message) {
   			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión:1.12.2\nNº de mods:tal\nIP:tal');
   			message.channel.send(Embed3);
   		break;
+      case "tienda":
+        const Embed3 = new Discord.MessageEmbed()
+        .setTitle("Empire Islands")
+        .setColor(0xFF8000)
+        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+        .setDescription("Actualizado del día 08/12/2020:")
+        .addField("Skyblock", '3 Vips, 3€ / 5€ / 9€.\nLink: https://empskyislands.enjin.com/');
+        message.channel.send(Embed3);
+      break;
   	}
 
   	/*if (command === "help") {
