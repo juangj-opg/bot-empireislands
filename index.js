@@ -24,7 +24,7 @@ client.on("message", function(message) {
   			.setDescription("Estos son los comandos del bot de Empire Islands:")
   			.addField("ei!help", "Podrás ver los comandos de este bot.")
   			.addField("ei!discord", "Podrás crear un enlace temporal para invitar gente.")
-  			.addField("ei!servidor", "Podrás consultar los servidores que están actualmente activos.");
+  			.addField("ei!servidor", "Podrás consultar los servidores que están actualmente activos.")
   			.addField("ei!tienda", "Podrás consultar los vips u otros pagos del servidor.");
         message.channel.send(Embed);
   		break;
