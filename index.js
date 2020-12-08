@@ -47,13 +47,13 @@ client.on("message", function(message) {
   			message.channel.send(Embed3);
   		break;
       case "tienda":
-        const Embed3 = new Discord.MessageEmbed()
+        const Embed4 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
         .setDescription("Actualizado del día 08/12/2020:")
         .addField("Skyblock", '3 Vips, 3€ / 5€ / 9€.\nLink: https://empskyislands.enjin.com/');
-        message.channel.send(Embed3);
+        message.channel.send(Embed4);
       break;
   	}
 
