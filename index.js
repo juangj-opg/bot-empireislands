@@ -78,10 +78,10 @@ client.on("message", function(message) {
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
         .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
-        .addField("Primera Regla", 'No hacer ningún tipo de spam en cualquier canal de texto.')
-        .addField("Segunda Regla", 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
-        .addField("Tercera Regla", 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
-        .addField("Cuarta Regla", 'Los insultos no están permitidos.')
+        .addField('Primera Regla', 'No hacer ningún tipo de spam en cualquier canal de texto.')
+        .addField('Segunda Regla', 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
+        .addField('Tercera Regla', 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
+        .addField('Cuarta Regla', 'Los insultos no están permitidos.')
         .setFooter('Sigue leyendo con ei!reglas2')
         .setTimestamp();
         message.channel.send(/*{embed: */Embed6/*}).then(embedMessage => {
@@ -146,6 +146,14 @@ client.on("message", function(message) {
                   embed.setFooter(`Page ${page} of ${pages.length}`)
                   msg.edit(embed)
                   r.users.remove(r.users.cache.filter(u => u === message.author).first())
+                  if (page == 1) {
+                    embed.addField('Primera Regla', 'No hacer ningún tipo de spam en cualquier canal de texto.')
+                    embed.addField('Segunda Regla', 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
+                    embed.addField('Tercera Regla', 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
+                    embed.addField('Cuarta Regla', 'Los insultos no están permitidos.')
+                    embed.setFooter('Sigue leyendo con ei!reglas2')
+                    embed.setTimestamp()
+                  }
               })
 
               forwards.on('collect', (r, u) => {
@@ -155,6 +163,14 @@ client.on("message", function(message) {
                   embed.setFooter(`Page ${page} of ${pages.length}`)
                   msg.edit(embed)
                   r.users.remove(r.users.cache.filter(u => u === message.author).first())
+                  if (page == 1) {
+                    embed.addField('Primera Regla', 'No hacer ningún tipo de spam en cualquier canal de texto.')
+                    embed.addField('Segunda Regla', 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
+                    embed.addField('Tercera Regla', 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
+                    embed.addField('Cuarta Regla', 'Los insultos no están permitidos.')
+                    embed.setFooter('Sigue leyendo con ei!reglas2')
+                    embed.setTimestamp()
+                  }
               })
             })
           })
