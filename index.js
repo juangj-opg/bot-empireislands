@@ -78,10 +78,38 @@ client.on("message", function(message) {
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
         .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
-        .addField("Primera Regla", 'Nonox me tiene que pasar la imagen >:(')
-        .addField("Segunda Regla", 'Hacer más reglas.')
+        .addField("Primera Regla", 'No hacer ningún tipo de spam en cualquier canal de texto.')
+        .addField("Segunda Regla", 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
+        .addField("Tercera Regla", 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
+        .addField("Cuarta Regla", 'Los insultos no están permitidos.')
         .setTimestamp();
         message.channel.send(Embed6);
+      break;
+      case "reglas 2":
+        const Embed7 = new Discord.MessageEmbed()
+        .setTitle("Empire Islands")
+        .setColor(0xFF8000)
+        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+        .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
+        .addField("Quinta Regla", 'No publiques ni menciones otros servidores.')
+        .addField("Sexta Regla", 'El mal uso de expresiones (o emociones) puede llegar a ser sancionable.')
+        .addField("Septima Regla", 'Prohíbida las imágenes +18, gores y todo lo relacionado al desmembramiento, imagenes fuertes o con insultos en ellas.')
+        .addField("Octava Regla", 'El uso excesivo de tagear a alguien o etiquetarla sin que esta persona quiera, puede llegar a ser sancionable.')
+        .setTimestamp();
+        message.channel.send(Embed7);
+      break;
+      case "reglas 3":
+        const Embed8 = new Discord.MessageEmbed()
+        .setTitle("Empire Islands")
+        .setColor(0xFF8000)
+        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+        .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
+        .addField("Novena Regla", 'No molestar en los canales de voz.')
+        .addField("Décima Regla", 'Respetar al Staff de Empire Islands. Romper esta regla se sancionará cpn baneo inmediato de Discord y/o del Servidor de Minecraft.')
+        .addField("Undécima Regla", 'No etiquetar al Staff. Si necesitas ayuda, crea un ticket en #⌠🔩⌡leer-antes-soporte y un miembro del Staff te ayudará.\nIntenta evitar los mensajes privado en lo posible.')
+        .addField("Duodécima Regla", 'El nombre de Discord debe coincidir con el nombre que se use en el servidor.')
+        .setTimestamp();
+        message.channel.send(Embed8);
       break;
   	} 
     //reglas - mas o menos, poner todas las reglas,x
