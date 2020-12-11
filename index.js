@@ -73,7 +73,7 @@ client.on("message", function(message) {
         message.channel.send(Embed5);
       break;
       case "reglas":
-      const options = {
+      /*const options = {
         limit = 15 * 1000,
         min: 1,
         max: 3,
@@ -94,9 +94,9 @@ client.on("message", function(message) {
     return ['⬅', '➡', '🗑'].includes(reaction.emoji.name) && user.id == msg.author.id;
 };
 
-awaitReactions(msg, m, options, filter);
+awaitReactions(msg, m, options, filter);*/
 
-        /*const Embed6 = new Discord.MessageEmbed()
+        const Embed6 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
@@ -110,7 +110,7 @@ awaitReactions(msg, m, options, filter);
         message.channel.send({embed: Embed6}).then(embedMessage => {
     embedMessage.react("➡️");
     embedMessage.react("⏩");
-});*/
+});
       break;
       /*case "reglas 2":
         const Embed7 = new Discord.MessageEmbed()
