@@ -139,7 +139,6 @@ client.on("message", function(message) {
 
               const backwards = msg.createReactionCollector(backwardsFilter, {timer: 6000});
               const forwards = msg.createReactionCollector(forwardsFilter, {timer: 6000});
-              r.remove(r.users.filter(u => u === message.author).first());
               backwards.on('collect', r => {
                   if (page === 1) return;
                   page--;
@@ -155,6 +154,7 @@ client.on("message", function(message) {
                   embed.setFooter(`Pagina ${page} de ${pages.length}`);
                   msg.edit(embed)                  
               })
+              r.remove(r.users.filter(u => u === message.author).first());
           })
       })
       break;
