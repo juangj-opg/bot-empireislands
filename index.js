@@ -119,43 +119,45 @@ client.on("message", function(message) {
       break;
       case "prueba":
           let pages = ['Page one!', 'Second page', 'Third page']
-let page = 1 
+          let page = 1 
 
-const embed = new Discord.MessageEmbed() // Define a new embed
-.setColor(0xffffff) // Set the color
-.setFooter(`Page ${page} of ${pages.length}`)
-.setDescription(pages[page-1])
+          const embed = new Discord.MessageEmbed() // Define a new embed
+          .setColor(0xFF8000)
+          .setTitle("Empire Islands")
+          .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+          .setFooter(`Page ${page} of ${pages.length}`)
+          .setDescription(pages[page-1])
 
-message.channel.send({embed}).then(msg => {
-  msg.react('⬅').then( r => {
-    msg.react('➡')
+          message.channel.send({embed}).then(msg => {
+            msg.react('⬅').then( r => {
+              msg.react('➡')
 
-    // Filters
-    const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id
-    const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id
+              // Filters
+              const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id
+              const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id
 
-    const backwards = msg.createReactionCollector(backwardsFilter, {timer: 6000})
-    const forwards = msg.createReactionCollector(forwardsFilter, {timer: 6000})
+              const backwards = msg.createReactionCollector(backwardsFilter, {timer: 6000})
+              const forwards = msg.createReactionCollector(forwardsFilter, {timer: 6000})
 
-    backwards.on('collect', (r, u) => {
-        if (page === 1) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
-        page--
-        embed.setDescription(pages[page-1])
-        embed.setFooter(`Page ${page} of ${pages.length}`)
-        msg.edit(embed)
-        r.users.remove(r.users.cache.filter(u => u === message.author).first())
-    })
+              backwards.on('collect', (r, u) => {
+                  if (page === 1) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
+                  page--
+                  embed.setDescription(pages[page-1])
+                  embed.setFooter(`Page ${page} of ${pages.length}`)
+                  msg.edit(embed)
+                  r.users.remove(r.users.cache.filter(u => u === message.author).first())
+              })
 
-    forwards.on('collect', (r, u) => {
-        if (page === pages.length) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
-        page++
-        embed.setDescription(pages[page-1])
-        embed.setFooter(`Page ${page} of ${pages.length}`)
-        msg.edit(embed)
-        r.users.remove(r.users.cache.filter(u => u === message.author).first())
-    })
-  })
-})
+              forwards.on('collect', (r, u) => {
+                  if (page === pages.length) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
+                  page++
+                  embed.setDescription(pages[page-1])
+                  embed.setFooter(`Page ${page} of ${pages.length}`)
+                  msg.edit(embed)
+                  r.users.remove(r.users.cache.filter(u => u === message.author).first())
+              })
+            })
+          })
       break;
   	} 
     //reglas - mas o menos, poner todas las reglas,x
