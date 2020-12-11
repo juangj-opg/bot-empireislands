@@ -122,6 +122,7 @@ client.on("message", function(message) {
   	/*if (command === "help") {
     	message.channel.send('```Hola```');                    
   	} */ 
+    Embed6.react('➡').then( message.channel.send(Embed7) );
 });                                      
 
 client.login(config.BOT_TOKEN);
