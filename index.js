@@ -121,7 +121,7 @@ client.on("message", function(message) {
           let pages = ['Page one!', 'Second page', 'Third page'];
           let page = 1; 
 
-          const embed = new Discord.RichEmbed() // Define a new embed
+          const embed = new Discord.MessageEmbed() // Define a new embed
           .setColor(0xffffff) // Set the color
           .setFooter(`Page ${page} of ${pages.length}`)
           .setDescription(pages[page-1])
