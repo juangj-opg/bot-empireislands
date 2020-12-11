@@ -84,6 +84,18 @@ client.on("message", function(message) {
       await m.react('⬅');
       await m.react('➡');
       await m.react('🗑');
+
+      const pages = {
+        1: { title: ':one:', description: 'This is page one!' }, 
+        2: { title: ':two:', description: 'This is page two!' }
+      }
+
+      const filter = (reaction, user) => {
+    return ['⬅', '➡', '🗑'].includes(reaction.emoji.name) && user.id == msg.author.id;
+};
+
+awaitReactions(msg, m, options, filter);
+
         /*const Embed6 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
