@@ -99,6 +99,7 @@ client.on("message", function(message) {
         .addField("Sexta Regla", 'El mal uso de expresiones (o emociones) puede llegar a ser sancionable.')
         .addField("Septima Regla", 'Prohíbida las imágenes +18, gores y todo lo relacionado al desmembramiento, imagenes fuertes o con insultos en ellas.')
         .addField("Octava Regla", 'El uso excesivo de tagear a alguien o etiquetarla sin que esta persona quiera, puede llegar a ser sancionable.')
+        .setFooter('Sigue leyendo con ei!reglas3')
         .setTimestamp();
         message.channel.send(Embed7);
       break;
@@ -112,6 +113,7 @@ client.on("message", function(message) {
         .addField("Décima Regla", 'Respetar al Staff de Empire Islands. Romper esta regla se sancionará cpn baneo inmediato de Discord y/o del Servidor de Minecraft.')
         .addField("Undécima Regla", 'No etiquetar al Staff. Si necesitas ayuda, crea un ticket en #⌠🔩⌡leer-antes-soporte y un miembro del Staff te ayudará.\nIntenta evitar los mensajes privado en lo posible.')
         .addField("Duodécima Regla", 'El nombre de Discord debe coincidir con el nombre que se use en el servidor.')
+        .setFooter('Tres advertencias pueden llevar a un baneo permanente.')
         .setTimestamp();
         message.channel.send(Embed8);
       break;
