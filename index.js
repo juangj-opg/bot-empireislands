@@ -82,6 +82,7 @@ client.on("message", function(message) {
         .addField("Segunda Regla", 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
         .addField("Tercera Regla", 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
         .addField("Cuarta Regla", 'Los insultos no están permitidos.')
+        .setFooter('Ryam v1b • Help Menu')
         .setTimestamp();
         message.channel.send(Embed6);
       break;
