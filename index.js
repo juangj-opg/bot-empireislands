@@ -77,9 +77,9 @@ client.on("message", function(message) {
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-        .setDescription("Descarga aquí el Launcher que necesites\nSi surge algún fallo puedes decirlo en general e intentaremos solucionarlo.")
-        .addField("Technic Premium", 'Launcher de Technic para los usuarios premium.\nLink: [MEGA](https://mega.nz/file/0slDCSTA#a2yhamMYmO57AyqmxzEz4EYOszTuesOta9x7U4J_Ack)')
-        .addField("Technic No Premium", 'Launcher de Technic para los usuarios no premium.\nLink: [MEGA](https://mega.nz/file/Mh1CUARL#0bS9SN4O9mzU8vHkgXo6qC9XTgVUJ48IUE29HIS9wkE)')
+        .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
+        .addField("Primera Regla", 'Nonox me tiene que pasar la imagen >:(')
+        .addField("Segunda Regla", 'Hacer más reglas.')
         .setTimestamp();
         message.channel.send(Embed6);
       break;
