@@ -139,23 +139,21 @@ client.on("message", function(message) {
 
               const backwards = msg.createReactionCollector(backwardsFilter, {timer: 6000});
               const forwards = msg.createReactionCollector(forwardsFilter, {timer: 6000});
-
+              r.remove(r.users.filter(u => u === message.author).first());
               backwards.on('collect', r => {
                   if (page === 1) return;
                   page--;
                   embed.setDescription(pages[page-1]);
-                  embed.setFooter(`Page ${page} of ${pages.length}`);
+                  embed.setFooter(`Pagina ${page} de ${pages.length}`);
                   msg.edit(embed)
-                  r.remove(r.users.filter(u => u === message.author).first());
               })
 
               forwards.on('collect', r => {
                   if (page === pages.length) return;
                   page++;
                   embed.setDescription(pages[page-1]);
-                  embed.setFooter(`Page ${page} of ${pages.length}`);
-                  msg.edit(embed)
-                  r.remove(r.users.filter(u => u === message.author).first());
+                  embed.setFooter(`Pagina ${page} de ${pages.length}`);
+                  msg.edit(embed)                  
               })
           })
       })
