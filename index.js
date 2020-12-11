@@ -85,7 +85,7 @@ client.on("message", function(message) {
         .setFooter('Sigue leyendo con ei!reglas 2')
         .setTimestamp();
         message.channel.send({embed: Embed6}).then(embedMessage => {
-    embedMessage.react("👍");
+    embedMessage.react(":arrow_right:");
 });
       break;
       case "reglas 2":
