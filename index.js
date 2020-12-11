@@ -114,7 +114,7 @@ client.on("message", function(message) {
         .addField("Duodécima Regla", 'El nombre de Discord debe coincidir con el nombre que se use en el servidor.')
         .setTimestamp();
         message.channel.send(Embed8);
-      break;*/
+      break;
   	} 
     //reglas - mas o menos, poner todas las reglas,x
 
