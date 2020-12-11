@@ -73,29 +73,6 @@ client.on("message", function(message) {
         message.channel.send(Embed5);
       break;
       case "reglas":
-      /*const options = {
-        limit = 15 * 1000,
-        min: 1,
-        max: 3,
-        page: 1
-      }
-      const m = await msg.channel.send({ embed: pages[options.page] });
-
-      await m.react('⬅');
-      await m.react('➡');
-      await m.react('🗑');
-
-      const pages = {
-        1: { title: ':one:', description: 'This is page one!' }, 
-        2: { title: ':two:', description: 'This is page two!' }
-      }
-
-      const filter = (reaction, user) => {
-    return ['⬅', '➡', '🗑'].includes(reaction.emoji.name) && user.id == msg.author.id;
-};
-
-awaitReactions(msg, m, options, filter);*/
-
         const Embed6 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
@@ -105,14 +82,14 @@ awaitReactions(msg, m, options, filter);*/
         .addField("Segunda Regla", 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
         .addField("Tercera Regla", 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
         .addField("Cuarta Regla", 'Los insultos no están permitidos.')
-        .setFooter('Sigue leyendo con ei!reglas 2')
+        .setFooter('Sigue leyendo con ei!reglas2')
         .setTimestamp();
-        message.channel.send({embed: Embed6}).then(embedMessage => {
+        message.channel.send(/*{embed: */Embed6/*}).then(embedMessage => {
     embedMessage.react("➡️");
     embedMessage.react("⏩");
-});
+}*/);
       break;
-      /*case "reglas 2":
+      case "reglas2":
         const Embed7 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
@@ -125,7 +102,7 @@ awaitReactions(msg, m, options, filter);*/
         .setTimestamp();
         message.channel.send(Embed7);
       break;
-      case "reglas 3":
+      case "reglas3":
         const Embed8 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
