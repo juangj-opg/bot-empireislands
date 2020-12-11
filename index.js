@@ -73,7 +73,18 @@ client.on("message", function(message) {
         message.channel.send(Embed5);
       break;
       case "reglas":
-        const Embed6 = new Discord.MessageEmbed()
+      const options = {
+        limit = 15 * 1000,
+        min: 1,
+        max: 3,
+        page: 1
+      }
+      const m = await msg.channel.send({ embed: pages[options.page] });
+
+      await m.react('⬅');
+      await m.react('➡');
+      await m.react('🗑');
+        /*const Embed6 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
@@ -87,10 +98,9 @@ client.on("message", function(message) {
         message.channel.send({embed: Embed6}).then(embedMessage => {
     embedMessage.react("➡️");
     embedMessage.react("⏩");
-     
-});
+});*/
       break;
-      case "reglas 2":
+      /*case "reglas 2":
         const Embed7 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
@@ -115,7 +125,7 @@ client.on("message", function(message) {
         .addField("Duodécima Regla", 'El nombre de Discord debe coincidir con el nombre que se use en el servidor.')
         .setTimestamp();
         message.channel.send(Embed8);
-      break;
+      break;*/
   	} 
     //reglas - mas o menos, poner todas las reglas,x
 
