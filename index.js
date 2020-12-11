@@ -86,6 +86,8 @@ client.on("message", function(message) {
         .setTimestamp();
         message.channel.send({embed: Embed6}).then(embedMessage => {
     embedMessage.react("➡️");
+    embedMessage.react("⏩");
+     
 });
       break;
       case "reglas 2":
