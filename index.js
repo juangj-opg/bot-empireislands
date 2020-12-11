@@ -121,9 +121,11 @@ client.on("message", function(message) {
           let pages = ['Page one!', 'Second page', 'Third page'];
           let page = 1; 
 
-          const embed = new Discord.MessageEmbed() // Define a new embed
-          .setColor(0xffffff) // Set the color
-          .setFooter(`Page ${page} of ${pages.length}`)
+          const embed = new Discord.MessageEmbed()
+          .setTitle("Empire Islands")
+          .setColor(0xFF8000)
+          .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+          .setFooter(`Pagina ${page} de ${pages.length}`)
           .setDescription(pages[page-1])
 
           message.channel.send(embed).then(msg => {
@@ -144,6 +146,7 @@ client.on("message", function(message) {
                   embed.setDescription(pages[page-1]);
                   embed.setFooter(`Page ${page} of ${pages.length}`);
                   msg.edit(embed)
+                  r.remove(r.users.filter(u => u === message.author).first());
               })
 
               forwards.on('collect', r => {
@@ -152,6 +155,7 @@ client.on("message", function(message) {
                   embed.setDescription(pages[page-1]);
                   embed.setFooter(`Page ${page} of ${pages.length}`);
                   msg.edit(embed)
+                  r.remove(r.users.filter(u => u === message.author).first());
               })
           })
       })
