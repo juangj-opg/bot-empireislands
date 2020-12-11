@@ -27,6 +27,7 @@ client.on("message", function(message) {
   			.addField("ei!servidor", "Podrás consultar los servidores que están actualmente activos.") 
   			.addField("ei!tienda", "Podrás consultar los vips u otros pagos del servidor.")
         .addField("ei!launcher", "Podrás ver los launchers que usamos para Empire Islands.")
+        .addField("ei!reglas", "Podrás ver las reglas de Empire Islands. ")
         .setTimestamp();
         message.channel.send(Embed);
   		break;
@@ -70,6 +71,17 @@ client.on("message", function(message) {
         .addField("Technic No Premium", 'Launcher de Technic para los usuarios no premium.\nLink: [MEGA](https://mega.nz/file/Mh1CUARL#0bS9SN4O9mzU8vHkgXo6qC9XTgVUJ48IUE29HIS9wkE)')
         .setTimestamp();
         message.channel.send(Embed5);
+      break;
+      case "reglas":
+        const Embed6 = new Discord.MessageEmbed()
+        .setTitle("Empire Islands")
+        .setColor(0xFF8000)
+        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+        .setDescription("Descarga aquí el Launcher que necesites\nSi surge algún fallo puedes decirlo en general e intentaremos solucionarlo.")
+        .addField("Technic Premium", 'Launcher de Technic para los usuarios premium.\nLink: [MEGA](https://mega.nz/file/0slDCSTA#a2yhamMYmO57AyqmxzEz4EYOszTuesOta9x7U4J_Ack)')
+        .addField("Technic No Premium", 'Launcher de Technic para los usuarios no premium.\nLink: [MEGA](https://mega.nz/file/Mh1CUARL#0bS9SN4O9mzU8vHkgXo6qC9XTgVUJ48IUE29HIS9wkE)')
+        .setTimestamp();
+        message.channel.send(Embed6);
       break;
   	} 
     //reglas - mas o menos, poner todas las reglas,x
