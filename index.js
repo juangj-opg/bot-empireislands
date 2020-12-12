@@ -156,27 +156,10 @@ client.on("message", function(message) {
               forwards.on('collect', (r, u) => {
                   if (page === pages.length) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
                   page++
-                  if (page == 2) {
-                    eembed2 = copy_embed;
-                    eembed2.addField("Quinta Regla", 'No publiques ni menciones otros servidores.')
-                    eembed2.addField("Sexta Regla", 'El mal uso de expresiones (o emociones) puede llegar a ser sancionable.')
-                    eembed2.addField("Septima Regla", 'Prohíbida las imágenes +18, gores y todo lo relacionado al desmembramiento, imagenes fuertes o con insultos en ellas.')
-                    eembed2.addField("Octava Regla", 'El uso excesivo de tagear a alguien o etiquetarla sin que esta persona quiera, puede llegar a ser sancionable.')
-                    message.channel.send(eembed2);
-                  }
-                  embed = copy_embed;
                   embed.setDescription(pages[page-1])
                   embed.setFooter(`Pagina ${page} de ${pages.length}`)
                   msg.edit(embed)
-
-                  if (page == 2) {
-                    eembed2 = copy_embed;
-                    eembed2.addField("Quinta Regla", 'No publiques ni menciones otros servidores.')
-                    eembed2.addField("Sexta Regla", 'El mal uso de expresiones (o emociones) puede llegar a ser sancionable.')
-                    eembed2.addField("Septima Regla", 'Prohíbida las imágenes +18, gores y todo lo relacionado al desmembramiento, imagenes fuertes o con insultos en ellas.')
-                    eembed2.addField("Octava Regla", 'El uso excesivo de tagear a alguien o etiquetarla sin que esta persona quiera, puede llegar a ser sancionable.')
-                    message.channel.send(eembed2);
-                  }
+                  
                   r.users.remove(r.users.cache.filter(u => u === message.author).first())
               })
             })
