@@ -175,23 +175,27 @@ client.on("message", function(message) {
                 name: 'main',
                 // A MessageEmbed to actually send in chat, and...
                 content: new Discord.MessageEmbed({
-                    title: 'Help Menu',
+                    title: 'Empire Islands',
+                    color: 0xFF8000,
                     description: 'This is some helpful info!'
                 }),
                 // A set of reactions with destination names attached.
                 // Note there's also special destination names (read below)
                 reactions: {
                     '⏹': 'delete',
-                    '▶': 'extra'
+                    '▶': 'next',
+                    '⏩': 'last'
                 }
             },
             {
                 name: 'extra',
                 content: new Discord.MessageEmbed({
-                    title: 'Extra menu',
+                    title: 'Empire Islands',
+                    color: 0xFF8000,
                     description: 'This is another page. You can have as many of these as you want.'
                 }),
                 reactions: {
+                    '⏹': 'delete',
                     '◀': 'first'
                 }
             }
