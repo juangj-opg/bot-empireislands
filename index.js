@@ -207,8 +207,6 @@ client.on("message", function(message) {
                 // A set of reactions with destination names attached.
                 // Note there's also special destination names (read below)
                 reactions: {
-                    '⏮️': 'first',
-                	'◀️': 'previous',
                     '⏹': 'stop',
                     '▶': 'next',
                     '⏭️': 'last'
@@ -249,11 +247,9 @@ client.on("message", function(message) {
                 // A set of reactions with destination names attached.
                 // Note there's also special destination names (read below)
                 reactions: {
-                	'⏮️': 'first',
                 	'◀️': 'previous',
                     '⏹': 'stop',
-                    '▶': 'next',
-                    '⏭️': 'last'
+                    '▶': 'next'
                 }
             },
             {
@@ -293,15 +289,13 @@ client.on("message", function(message) {
                 reactions: {
                 	'⏮️': 'first',
                 	'◀️': 'previous',
-                    '⏹': 'stop',
-                    '▶': 'next',
-                    '⏭️': 'last'
+                    '⏹': 'stop'
                 }
             },
             // The last parameter is the number of milliseconds you want the menu to collect reactions for each page before it stops to save resources
             // The timer is reset when a user interacts with the menu.
             // This is optional, and defaults to 180000 (3 minutes).
-        ], 300000)
+        ], 120000)
         // Run Menu.start() when you're ready to send the menu in chat.
         // Once sent, the menu will automatically handle everything else.
         helpMenu.start()
