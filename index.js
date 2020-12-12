@@ -243,7 +243,12 @@ client.on("message", function(message) {
 					footer: {
 						text: 'Página 2 de 3',
 					}
-            },
+            )},
+                reactions: {
+                    '◀': 'previous',
+                    '⏹': 'stop',
+                    '▶': 'next'
+                }
             {
                 title: 'Empire Islands',
                     color: 0xFF8000,
