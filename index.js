@@ -72,9 +72,23 @@ client.on("message", function(message) {
         .setTimestamp();
         message.channel.send(Embed5);
       break;
-      //case "reglas":
-        
-     // break;
+      case "reglas":
+        const Embed6 = new Discord.MessageEmbed()
+        .setTitle("Empire Islands")
+        .setColor(0xFF8000)
+        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+        .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
+        .addField('Primera Regla', 'No hacer ningún tipo de spam en cualquier canal de texto.')
+        .addField('Segunda Regla', 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
+        .addField('Tercera Regla', 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
+        .addField('Cuarta Regla', 'Los insultos no están permitidos.')
+        .setFooter('Sigue leyendo con ei!reglas2')
+        .setTimestamp();
+        message.channel.send(/*{embed: */Embed6/*}).then(embedMessage => {
+    embedMessage.react("➡️");
+    embedMessage.react("⏩");
+}*/);
+      break;
       case "reglas2":
         const Embed7 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
@@ -104,23 +118,6 @@ client.on("message", function(message) {
         message.channel.send(Embed8);
       break;
       case "prueba":
-          const Embed6 = new Discord.MessageEmbed()
-          .setTitle("Empire Islands")
-          .setColor(0xFF8000)
-          .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-          .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
-          .addField('Primera Regla', 'No hacer ningún tipo de spam en cualquier canal de texto.')
-          .addField('Segunda Regla', 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
-          .addField('Tercera Regla', 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
-          .addField('Cuarta Regla', 'Los insultos no están permitidos.')
-          .setFooter('Sigue leyendo con ei!reglas2')
-          .setTimestamp();
-          message.channel.send(/*{embed: */Embed6/*}).then(embedMessage => {
-      embedMessage.react("➡️");
-      embedMessage.react("⏩");
-  }*/);
-
-
           let pages = ['Page one!', 'Second page', 'Third page']
           let page = 1 
 
@@ -135,16 +132,13 @@ client.on("message", function(message) {
             msg.react('⬅').then( r => {
               msg.react('➡')
 
-              if(page == 1){
-                embed = Embed6;
-              }
-
               // Filters
               const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id
               const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id
 
               const backwards = msg.createReactionCollector(backwardsFilter, {timer: 6000})
               const forwards = msg.createReactionCollector(forwardsFilter, {timer: 6000})
+
               backwards.on('collect', (r, u) => {
                   if (page === 1) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
                   page--
