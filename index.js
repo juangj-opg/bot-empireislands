@@ -72,7 +72,7 @@ client.on("message", function(message) {
         .setTimestamp();
         message.channel.send(Embed5);
       break;
-      /*case "reglas":
+      case "reglas":
         const Embed6 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
@@ -87,8 +87,8 @@ client.on("message", function(message) {
         message.channel.send(/*{embed: */Embed6/*}).then(embedMessage => {
     embedMessage.react("➡️");
     embedMessage.react("⏩");
-});
-      break;*/
+}*/);
+      break;
       case "reglas2":
         const Embed7 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
@@ -118,17 +118,6 @@ client.on("message", function(message) {
         message.channel.send(Embed8);
       break;
       case "prueba":
-          const Embed6 = new Discord.MessageEmbed()
-        .setTitle("Empire Islands")
-        .setColor(0xFF8000)
-        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-        .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
-        .addField('Primera Regla', 'No hacer ningún tipo de spam en cualquier canal de texto.')
-        .addField('Segunda Regla', 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
-        .addField('Tercera Regla', 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
-        .addField('Cuarta Regla', 'Los insultos no están permitidos.')
-        .setFooter('Sigue leyendo con ei!reglas2')
-        .setTimestamp();
           var pagina1 = "Recuerda leer las reglas bien si no quieres ser sancionado\n**Primera Regla**\nPrueba"
 
 
@@ -139,7 +128,6 @@ client.on("message", function(message) {
           .setColor(0xFF8000)
           .setTitle("Empire Islands")
           .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-          .addField("Regla", 'No publiques ni menciones otros servidores.')
           .setFooter(`Pagina ${page} de ${pages.length}`)
           .setDescription(pages[page-1])
 
@@ -169,10 +157,11 @@ client.on("message", function(message) {
                   page++
                   embed.setDescription(pages[page-1])
                   embed.setFooter(`Pagina ${page} de ${pages.length}`)
-                  embed = Embed6;
                   msg.edit(embed)
                   r.users.remove(r.users.cache.filter(u => u === message.author).first())
-                  
+                  if (page == 1) {
+                    
+                  }
               })
             })
           })
