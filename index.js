@@ -223,31 +223,33 @@ client.on("message", function(message) {
 					},
 					fields: [
 						{
-							name: 'Quinta Regla',
-							value: 'taltal',
+							name: 'Primera Regla',
+							value: 'No hacer ningún tipo de spam en cualquier canal de texto.',
 						},
 						{
-							name: 'Sexta Regla',
-							value: 'taltal',
+							name: 'Segunda Regla',
+							value: 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.',
 						},
 						{
-							name: 'Septima Regla',
-							value: 'taltal',
+							name: 'Tercera Regla',
+							value: 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠:nut_and_bolt:⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.',
 						},
 						{
-							name: 'Octava Regla',
-							value: 'taltal',
+							name: 'Cuarta Regla',
+							value: 'Los insultos no están permitidos.',
 						},
 					],
 					timestamp: new Date(),
 					footer: {
 						text: 'Página 2 de 3',
 					}
-            	)},
+                }),
+                // A set of reactions with destination names attached.
+                // Note there's also special destination names (read below)
                 reactions: {
-                    '◀': 'previous',
                     '⏹': 'stop',
-                    '▶': 'next'
+                    '▶': 'next',
+                    '⏭️': 'last'
                 }
             },
             {
