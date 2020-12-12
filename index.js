@@ -202,7 +202,7 @@ client.on("message", function(message) {
 					timestamp: new Date(),
 					footer: {
 						text: 'Página 1 de 3',
-					},
+					}
                 }),
                 // A set of reactions with destination names attached.
                 // Note there's also special destination names (read below)
@@ -223,26 +223,26 @@ client.on("message", function(message) {
 					},
 					fields: [
 						{
-							name: 'Primera Regla',
+							name: 'Quinta Regla',
 							value: 'taltal',
 						},
 						{
-							name: 'Segunda Regla',
+							name: 'Sexta Regla',
 							value: 'taltal',
 						},
 						{
-							name: 'Tercera Regla',
+							name: 'Septima Regla',
 							value: 'taltal',
 						},
 						{
-							name: 'Cuarta Regla',
+							name: 'Octava Regla',
 							value: 'taltal',
 						},
 					],
 					timestamp: new Date(),
 					footer: {
 						text: 'Página 2 de 3',
-					},
+					}
             },
             {
                 title: 'Empire Islands',
@@ -253,19 +253,19 @@ client.on("message", function(message) {
 					},
 					fields: [
 						{
-							name: 'Primera Regla',
+							name: 'Novena Regla',
 							value: 'taltal',
 						},
 						{
-							name: 'Segunda Regla',
+							name: 'Décima Regla',
 							value: 'taltal',
 						},
 						{
-							name: 'Tercera Regla',
+							name: 'Undécima Regla',
 							value: 'taltal',
 						},
 						{
-							name: 'Cuarta Regla',
+							name: 'Duodécima Regla',
 							value: 'taltal',
 						},
 					],
