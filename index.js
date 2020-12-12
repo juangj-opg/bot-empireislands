@@ -177,18 +177,26 @@ client.on("message", function(message) {
                 content: new Discord.MessageEmbed({
                     title: 'Empire Islands',
                     color: 0xFF8000,
-                    description: 'Recuerda leer las reglas bien si no quieres ser sancionado',
+                    description: 'Recuerda leer las reglas bien si no quieres ser sancionado.',
                     thumbnail: {
        					url: "https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png"
 					},
 					fields: [
 						{
 							name: 'Primera Regla',
-							value: 'taltal',
+							value: 'No hacer ningún tipo de spam en cualquier canal de texto.',
 						},
 						{
 							name: 'Segunda Regla',
-							value: 'taltaltal',
+							value: 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.',
+						},
+						{
+							name: 'Tercera Regla',
+							value: 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠:nut_and_bolt:⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.',
+						},
+						{
+							name: 'Cuarta Regla',
+							value: 'Los insultos no están permitidos.',
 						},
 					],
 					timestamp: new Date(),
@@ -209,20 +217,62 @@ client.on("message", function(message) {
                 content: new Discord.MessageEmbed({
                     title: 'Empire Islands',
                     color: 0xFF8000,
-                    description: 'Recuerda leer las reglas bien si no quieres ser sancionado.'
-                }),
-                reactions: {
-                    '◀': 'previous',
-                    '⏹': 'stop',
-                    '▶': 'next'
-                }
+                    description: 'Recuerda leer las reglas bien si no quieres ser sancionado.',
+                    thumbnail: {
+       					url: "https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png"
+					},
+					fields: [
+						{
+							name: 'Primera Regla',
+							value: 'taltal',
+						},
+						{
+							name: 'Segunda Regla',
+							value: 'taltal',
+						},
+						{
+							name: 'Tercera Regla',
+							value: 'taltal',
+						},
+						{
+							name: 'Cuarta Regla',
+							value: 'taltal',
+						},
+					],
+					timestamp: new Date(),
+					footer: {
+						text: 'Página 2 de 3',
+					},
             },
             {
-                name: 'reglas3',
-                content: new Discord.MessageEmbed({
-                    title: 'Empire Islands',
+                title: 'Empire Islands',
                     color: 0xFF8000,
-                    description: 'Recuerda leer las reglas bien si no quieres ser sancionado'
+                    description: 'Recuerda leer las reglas bien si no quieres ser sancionado.',
+                    thumbnail: {
+       					url: "https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png"
+					},
+					fields: [
+						{
+							name: 'Primera Regla',
+							value: 'taltal',
+						},
+						{
+							name: 'Segunda Regla',
+							value: 'taltal',
+						},
+						{
+							name: 'Tercera Regla',
+							value: 'taltal',
+						},
+						{
+							name: 'Cuarta Regla',
+							value: 'taltal',
+						},
+					],
+					timestamp: new Date(),
+					footer: {
+						text: 'Página 3 de 3',
+					},
                 }),
                 reactions: {
                 	'⏮️': 'first',
