@@ -167,7 +167,6 @@ client.on("message", function(message) {
           })
       break;
       case "prueba2":
-      	if (message.content === "!help") {
         // Provide a menu with a channel, an author ID to let control the menu, and an array of menu pages.
         let helpMenu = new Menu(message.channel, message.author.id, [
             // Each object in this array is a unique page.
@@ -203,7 +202,6 @@ client.on("message", function(message) {
         // Run Menu.start() when you're ready to send the menu in chat.
         // Once sent, the menu will automatically handle everything else.
         helpMenu.start()
-    }
       break;
   	} 
     //reglas - mas o menos, poner todas las reglas,x
