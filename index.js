@@ -128,6 +128,7 @@ client.on("message", function(message) {
           .setColor(0xFF8000)
           .setTitle("Empire Islands")
           .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+          .addField("Regla", 'No publiques ni menciones otros servidores.')
           .setFooter(`Pagina ${page} de ${pages.length}`)
           .setDescription(pages[page-1])
 
@@ -157,11 +158,10 @@ client.on("message", function(message) {
                   page++
                   embed.setDescription(pages[page-1])
                   embed.setFooter(`Pagina ${page} de ${pages.length}`)
+                  embed = Embed6;
                   msg.edit(embed)
                   r.users.remove(r.users.cache.filter(u => u === message.author).first())
-                  if (page == 1) {
-                    
-                  }
+                  
               })
             })
           })
