@@ -172,31 +172,48 @@ client.on("message", function(message) {
             // Each object in this array is a unique page.
             {
                 // A page object consists of a name, used as a destination by reactions...
-                name: 'main',
+                name: 'reglas1',
                 // A MessageEmbed to actually send in chat, and...
                 content: new Discord.MessageEmbed({
                     title: 'Empire Islands',
                     color: 0xFF8000,
-                    description: 'This is some helpful info!'
+                    description: 'Recuerda leer las reglas bien si no quieres ser sancionado!'
+                    thumbnail: {
+       					url: "https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png"
+					}
                 }),
                 // A set of reactions with destination names attached.
                 // Note there's also special destination names (read below)
                 reactions: {
-                    '⏹': 'delete',
+                    '⏹': 'stop',
                     '▶': 'next',
-                    '⏩': 'last'
+                    '⏭️': 'last'
                 }
             },
             {
-                name: 'extra',
+                name: 'reglas2',
                 content: new Discord.MessageEmbed({
                     title: 'Empire Islands',
                     color: 0xFF8000,
-                    description: 'This is another page. You can have as many of these as you want.'
+                    description: 'Recuerda leer las reglas bien si no quieres ser sancionado.'
                 }),
                 reactions: {
-                    '⏹': 'delete',
-                    '◀': 'first'
+                    '◀': 'previous',
+                    '⏹': 'stop',
+                    '▶': 'next'
+                }
+            },
+            {
+                name: 'reglas3',
+                content: new Discord.MessageEmbed({
+                    title: 'Empire Islands',
+                    color: 0xFF8000,
+                    description: 'Recuerda leer las reglas bien si no quieres ser sancionado'
+                }),
+                reactions: {
+                	'⏮️': 'first',
+                    '◀': 'previous',
+                    '⏹️': 'stop'
                 }
             }
             // The last parameter is the number of milliseconds you want the menu to collect reactions for each page before it stops to save resources
