@@ -178,9 +178,7 @@ client.on("message", function(message) {
                     title: 'Empire Islands',
                     color: 0xFF8000,
                     description: 'Recuerda leer las reglas bien si no quieres ser sancionado!'
-                    thumbnail: {
-       					url: "https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png"
-					}
+                    
                 }),
                 // A set of reactions with destination names attached.
                 // Note there's also special destination names (read below)
