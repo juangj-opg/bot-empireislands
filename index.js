@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const config = require("./config.json");
+const { Menu } = require('discord.js-menu');
 
 const client = new Discord.Client();
 
@@ -130,14 +131,7 @@ client.on("message", function(message) {
           .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
           .setFooter(`Pagina ${page} de ${pages.length}`)
           .setDescription(pages[page-1])
-          if (page == 2) {
-                    eembed2 = embed;
-                    eembed2.addField("Quinta Regla", 'No publiques ni menciones otros servidores.')
-                    eembed2.addField("Sexta Regla", 'El mal uso de expresiones (o emociones) puede llegar a ser sancionable.')
-                    eembed2.addField("Septima Regla", 'Prohíbida las imágenes +18, gores y todo lo relacionado al desmembramiento, imagenes fuertes o con insultos en ellas.')
-                    eembed2.addField("Octava Regla", 'El uso excesivo de tagear a alguien o etiquetarla sin que esta persona quiera, puede llegar a ser sancionable.')
-                    message.channel.send(eembed2);
-                  }
+          
           message.channel.send({embed}).then(msg => {
             msg.react('⬅').then( r => {
               msg.react('➡')
@@ -171,6 +165,45 @@ client.on("message", function(message) {
               })
             })
           })
+      break;
+      case "prueba2":
+      	if (message.content === "!help") {
+        // Provide a menu with a channel, an author ID to let control the menu, and an array of menu pages.
+        let helpMenu = new Menu(message.channel, message.author.id, [
+            // Each object in this array is a unique page.
+            {
+                // A page object consists of a name, used as a destination by reactions...
+                name: 'main',
+                // A MessageEmbed to actually send in chat, and...
+                content: new MessageEmbed({
+                    title: 'Help Menu',
+                    description: 'This is some helpful info!'
+                }),
+                // A set of reactions with destination names attached.
+                // Note there's also special destination names (read below)
+                reactions: {
+                    '⏹': 'delete',
+                    '▶': 'extra'
+                }
+            },
+            {
+                name: 'extra',
+                content: new MessageEmbed({
+                    title: 'Extra menu',
+                    description: 'This is another page. You can have as many of these as you want.'
+                }),
+                reactions: {
+                    '◀': 'first'
+                }
+            }
+            // The last parameter is the number of milliseconds you want the menu to collect reactions for each page before it stops to save resources
+            // The timer is reset when a user interacts with the menu.
+            // This is optional, and defaults to 180000 (3 minutes).
+        ], 300000)
+        // Run Menu.start() when you're ready to send the menu in chat.
+        // Once sent, the menu will automatically handle everything else.
+        helpMenu.start()
+    }
       break;
   	} 
     //reglas - mas o menos, poner todas las reglas,x
