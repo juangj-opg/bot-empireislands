@@ -207,6 +207,8 @@ client.on("message", function(message) {
                 // A set of reactions with destination names attached.
                 // Note there's also special destination names (read below)
                 reactions: {
+                    '⏮️': 'first',
+                	'◀️': 'previous',
                     '⏹': 'stop',
                     '▶': 'next',
                     '⏭️': 'last'
@@ -223,20 +225,20 @@ client.on("message", function(message) {
 					},
 					fields: [
 						{
-							name: 'Primera Regla',
-							value: 'No hacer ningún tipo de spam en cualquier canal de texto.',
+							name: 'Quinta Regla',
+							value: 'No publiques ni menciones otros servidores.',
 						},
 						{
-							name: 'Segunda Regla',
-							value: 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.',
+							name: 'Sexta Regla',
+							value: 'El mal uso de expresiones (o emociones) puede llegar a ser sancionable.',
 						},
 						{
-							name: 'Tercera Regla',
-							value: 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠:nut_and_bolt:⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.',
+							name: 'Septima Regla',
+							value: 'Prohíbida las imágenes +18, gores y todo lo relacionado al desmembramiento, imagenes fuertes o con insultos en ellas.',
 						},
 						{
-							name: 'Cuarta Regla',
-							value: 'Los insultos no están permitidos.',
+							name: 'Octava Regla',
+							value: 'El uso excesivo de tagear a alguien o etiquetarla sin que esta persona quiera, puede llegar a ser sancionable.',
 						},
 					],
 					timestamp: new Date(),
@@ -247,6 +249,8 @@ client.on("message", function(message) {
                 // A set of reactions with destination names attached.
                 // Note there's also special destination names (read below)
                 reactions: {
+                	'⏮️': 'first',
+                	'◀️': 'previous',
                     '⏹': 'stop',
                     '▶': 'next',
                     '⏭️': 'last'
@@ -264,19 +268,19 @@ client.on("message", function(message) {
 					fields: [
 						{
 							name: 'Novena Regla',
-							value: 'No hacer ningún tipo de spam en cualquier canal de texto.',
+							value: 'No molestar en los canales de voz.',
 						},
 						{
-							name: 'Segunda Regla',
-							value: 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.',
+							name: 'Décima Regla',
+							value: 'Respetar al Staff de Empire Islands. Romper esta regla se sancionará cpn baneo inmediato de Discord y/o del Servidor de Minecraft.',
 						},
 						{
-							name: 'Tercera Regla',
-							value: 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠:nut_and_bolt:⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.',
+							name: 'Undécima Regla',
+							value: 'No etiquetar al Staff. Si necesitas ayuda, crea un ticket en #⌠:nut_and_bolt:⌡leer-antes-soporte y un miembro del Staff te ayudará.\nIntenta evitar los mensajes privado en lo posible.',
 						},
 						{
-							name: 'Cuarta Regla',
-							value: 'Los insultos no están permitidos.',
+							name: 'Duodécima Regla',
+							value: 'El nombre de Discord debe coincidir con el nombre que se use en el servidor.',
 						},
 					],
 					timestamp: new Date(),
@@ -287,6 +291,8 @@ client.on("message", function(message) {
                 // A set of reactions with destination names attached.
                 // Note there's also special destination names (read below)
                 reactions: {
+                	'⏮️': 'first',
+                	'◀️': 'previous',
                     '⏹': 'stop',
                     '▶': 'next',
                     '⏭️': 'last'
