@@ -130,7 +130,14 @@ client.on("message", function(message) {
           .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
           .setFooter(`Pagina ${page} de ${pages.length}`)
           .setDescription(pages[page-1])
-          const copy_embed = embed;
+          if (page == 2) {
+                    eembed2 = embed;
+                    eembed2.addField("Quinta Regla", 'No publiques ni menciones otros servidores.')
+                    eembed2.addField("Sexta Regla", 'El mal uso de expresiones (o emociones) puede llegar a ser sancionable.')
+                    eembed2.addField("Septima Regla", 'Prohíbida las imágenes +18, gores y todo lo relacionado al desmembramiento, imagenes fuertes o con insultos en ellas.')
+                    eembed2.addField("Octava Regla", 'El uso excesivo de tagear a alguien o etiquetarla sin que esta persona quiera, puede llegar a ser sancionable.')
+                    message.channel.send(eembed2);
+                  }
           message.channel.send({embed}).then(msg => {
             msg.react('⬅').then( r => {
               msg.react('➡')
@@ -159,7 +166,7 @@ client.on("message", function(message) {
                   embed.setDescription(pages[page-1])
                   embed.setFooter(`Pagina ${page} de ${pages.length}`)
                   msg.edit(embed)
-                  
+
                   r.users.remove(r.users.cache.filter(u => u === message.author).first())
               })
             })
