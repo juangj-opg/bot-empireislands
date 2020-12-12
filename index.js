@@ -174,7 +174,7 @@ client.on("message", function(message) {
                 // A page object consists of a name, used as a destination by reactions...
                 name: 'main',
                 // A MessageEmbed to actually send in chat, and...
-                content: new MessageEmbed({
+                content: new Discord.MessageEmbed({
                     title: 'Help Menu',
                     description: 'This is some helpful info!'
                 }),
@@ -187,7 +187,7 @@ client.on("message", function(message) {
             },
             {
                 name: 'extra',
-                content: new MessageEmbed({
+                content: new Discord.MessageEmbed({
                     title: 'Extra menu',
                     description: 'This is another page. You can have as many of these as you want.'
                 }),
