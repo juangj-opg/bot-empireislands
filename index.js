@@ -74,101 +74,8 @@ client.on("message", function(message) {
         message.channel.send(Embed5);
       break;
       case "reglas":
-        const Embed6 = new Discord.MessageEmbed()
-        .setTitle("Empire Islands")
-        .setColor(0xFF8000)
-        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-        .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
-        .addField('Primera Regla', 'No hacer ningún tipo de spam en cualquier canal de texto.')
-        .addField('Segunda Regla', 'No colocar links externos a Empire (Excepción de YT o Noticias)\nCualquier Link para ganar dinero (Adfly por ejemplo), será eliminado.')
-        .addField('Tercera Regla', 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.')
-        .addField('Cuarta Regla', 'Los insultos no están permitidos.')
-        .setFooter('Sigue leyendo con ei!reglas2')
-        .setTimestamp();
-        message.channel.send(/*{embed: */Embed6/*}).then(embedMessage => {
-    embedMessage.react("➡️");
-    embedMessage.react("⏩");
-}*/);
-      break;
-      case "reglas2":
-        const Embed7 = new Discord.MessageEmbed()
-        .setTitle("Empire Islands")
-        .setColor(0xFF8000)
-        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-        .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
-        .addField("Quinta Regla", 'No publiques ni menciones otros servidores.')
-        .addField("Sexta Regla", 'El mal uso de expresiones (o emociones) puede llegar a ser sancionable.')
-        .addField("Septima Regla", 'Prohíbida las imágenes +18, gores y todo lo relacionado al desmembramiento, imagenes fuertes o con insultos en ellas.')
-        .addField("Octava Regla", 'El uso excesivo de tagear a alguien o etiquetarla sin que esta persona quiera, puede llegar a ser sancionable.')
-        .setFooter('Sigue leyendo con ei!reglas3')
-        .setTimestamp();
-        message.channel.send(Embed7);
-      break;
-      case "reglas3":
-        const Embed8 = new Discord.MessageEmbed()
-        .setTitle("Empire Islands")
-        .setColor(0xFF8000)
-        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-        .setDescription("Recuerda leer las reglas bien si no quieres ser sancionado")
-        .addField("Novena Regla", 'No molestar en los canales de voz.')
-        .addField("Décima Regla", 'Respetar al Staff de Empire Islands. Romper esta regla se sancionará cpn baneo inmediato de Discord y/o del Servidor de Minecraft.')
-        .addField("Undécima Regla", 'No etiquetar al Staff. Si necesitas ayuda, crea un ticket en #⌠🔩⌡leer-antes-soporte y un miembro del Staff te ayudará.\nIntenta evitar los mensajes privado en lo posible.')
-        .addField("Duodécima Regla", 'El nombre de Discord debe coincidir con el nombre que se use en el servidor.')
-        .setFooter('Tres advertencias pueden llevar a un baneo permanente.')
-        .setTimestamp();
-        message.channel.send(Embed8);
-      break;
-      case "prueba":
-          var pagina1 = "Recuerda leer las reglas bien si no quieres ser sancionado\n**Primera Regla**\nPrueba"
-
-
-          let pages = [pagina1, 'Second page', 'Third page']
-          let page = 1 
-
-          const embed = new Discord.MessageEmbed() // Define a new embed
-          .setColor(0xFF8000)
-          .setTitle("Empire Islands")
-          .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-          .setFooter(`Pagina ${page} de ${pages.length}`)
-          .setDescription(pages[page-1])
-          
-          message.channel.send({embed}).then(msg => {
-            msg.react('⬅').then( r => {
-              msg.react('➡')
-
-              // Filters
-              const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id
-              const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id
-
-              const backwards = msg.createReactionCollector(backwardsFilter, {timer: 6000})
-              const forwards = msg.createReactionCollector(forwardsFilter, {timer: 6000})
-
-              backwards.on('collect', (r, u) => {
-                  if (page === 1) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
-                  page--
-                  embed.setDescription(pages[page-1])
-                  embed.setFooter(`Pagina ${page} de ${pages.length}`)
-                  msg.edit(embed)
-                  
-                  r.users.remove(r.users.cache.filter(u => u === message.author).first())
-                  
-              })
-
-              forwards.on('collect', (r, u) => {
-                  if (page === pages.length) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
-                  page++
-                  embed.setDescription(pages[page-1])
-                  embed.setFooter(`Pagina ${page} de ${pages.length}`)
-                  msg.edit(embed)
-
-                  r.users.remove(r.users.cache.filter(u => u === message.author).first())
-              })
-            })
-          })
-      break;
-      case "prueba2":
-        // Provide a menu with a channel, an author ID to let control the menu, and an array of menu pages.
-        let helpMenu = new Menu(message.channel, message.author.id, [
+         // Provide a menu with a channel, an author ID to let control the menu, and an array of menu pages.
+        let reglas = new Menu(message.channel, message.author.id, [
             // Each object in this array is a unique page.
             {
                 // A page object consists of a name, used as a destination by reactions...
@@ -298,15 +205,57 @@ client.on("message", function(message) {
         ], 120000)
         // Run Menu.start() when you're ready to send the menu in chat.
         // Once sent, the menu will automatically handle everything else.
-        helpMenu.start()
+        reglas.start()
+      break;
+      case "prueba":
+          var pagina1 = "Recuerda leer las reglas bien si no quieres ser sancionado\n**Primera Regla**\nPrueba"
+
+
+          let pages = [pagina1, 'Second page', 'Third page']
+          let page = 1 
+
+          const embed = new Discord.MessageEmbed() // Define a new embed
+          .setColor(0xFF8000)
+          .setTitle("Empire Islands")
+          .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+          .setFooter(`Pagina ${page} de ${pages.length}`)
+          .setDescription(pages[page-1])
+          
+          message.channel.send({embed}).then(msg => {
+            msg.react('⬅').then( r => {
+              msg.react('➡')
+
+              // Filters
+              const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id
+              const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id
+
+              const backwards = msg.createReactionCollector(backwardsFilter, {timer: 6000})
+              const forwards = msg.createReactionCollector(forwardsFilter, {timer: 6000})
+
+              backwards.on('collect', (r, u) => {
+                  if (page === 1) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
+                  page--
+                  embed.setDescription(pages[page-1])
+                  embed.setFooter(`Pagina ${page} de ${pages.length}`)
+                  msg.edit(embed)
+                  
+                  r.users.remove(r.users.cache.filter(u => u === message.author).first())
+                  
+              })
+
+              forwards.on('collect', (r, u) => {
+                  if (page === pages.length) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
+                  page++
+                  embed.setDescription(pages[page-1])
+                  embed.setFooter(`Pagina ${page} de ${pages.length}`)
+                  msg.edit(embed)
+
+                  r.users.remove(r.users.cache.filter(u => u === message.author).first())
+              })
+            })
+          })
       break;
   	} 
-    //reglas - mas o menos, poner todas las reglas,x
-
-  	/*if (command === "help") {
-    	message.channel.send('```Hola```');                    
-  	} */ 
-
 });                                      
 
 client.login(config.BOT_TOKEN);
