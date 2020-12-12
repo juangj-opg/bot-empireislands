@@ -147,6 +147,14 @@ client.on("message", function(message) {
                   page--
                   embed.setDescription(pages[page-1])
                   embed.setFooter(`Pagina ${page} de ${pages.length}`)
+
+                  if (page == 2) {
+                    const eembed2 = embed;
+                    message.channel.send(eembed2);
+
+                  }
+
+
                   msg.edit(embed)
                   r.users.remove(r.users.cache.filter(u => u === message.author).first())
                   
