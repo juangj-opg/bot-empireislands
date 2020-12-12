@@ -150,6 +150,10 @@ client.on("message", function(message) {
 
                   if (page == 2) {
                     const eembed2 = embed;
+                    eembed2..addField("Quinta Regla", 'No publiques ni menciones otros servidores.')
+                    eembed2.addField("Sexta Regla", 'El mal uso de expresiones (o emociones) puede llegar a ser sancionable.')
+                    eembed2.addField("Septima Regla", 'Prohíbida las imágenes +18, gores y todo lo relacionado al desmembramiento, imagenes fuertes o con insultos en ellas.')
+                    eembed2.addField("Octava Regla", 'El uso excesivo de tagear a alguien o etiquetarla sin que esta persona quiera, puede llegar a ser sancionable.')
                     message.channel.send(eembed2);
 
                   }
