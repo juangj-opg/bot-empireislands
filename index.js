@@ -108,7 +108,7 @@ client.on("message", function(message) {
 						},
 						{
 							name: 'Tercera Regla',
-							value: 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠🔩⌡leer-antes-soporte  y contactar con cualquier mibro del staff disponible.',
+							value: 'Si necesitas algún tipo de soporte, puedes crear un ticket leyendo antes #⌠:nut_and_bolt:⌡leer-antes-soporte y contactar con cualquier mibro del staff disponible.',
 						},
 						{
 							name: 'Cuarta Regla',
@@ -184,11 +184,11 @@ client.on("message", function(message) {
 						},
 						{
 							name: 'Décima Regla',
-							value: 'Respetar al Staff de Empire Islands. Romper esta regla se sancionará con baneo inmediato de Discord y/o del Servidor de Minecraft.',
+							value: 'Respetar al Staff de Empire Islands. Romper esta regla se sancionará cpn baneo inmediato de Discord y/o del Servidor de Minecraft.',
 						},
 						{
 							name: 'Undécima Regla',
-							value: 'No etiquetar al Staff. Si necesitas ayuda, crea un ticket en #⌠🔩⌡leer-antes-soporte  y un miembro del Staff te ayudará.\nIntenta evitar los mensajes privado en lo posible.',
+							value: 'No etiquetar al Staff. Si necesitas ayuda, crea un ticket en #⌠:nut_and_bolt:⌡leer-antes-soporte y un miembro del Staff te ayudará.\nIntenta evitar los mensajes privado en lo posible.',
 						},
 						{
 							name: 'Duodécima Regla',
