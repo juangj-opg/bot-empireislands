@@ -11,7 +11,7 @@ client.on("message", function(message) {
 	
 	if (message.author.bot) return;      
 	if (!message.content.toLowerCase().startsWith(prefix)) return;  
-	client.setGame('ei!help | Usa ese comando para saber usar el bot de Empire Islands!');
+	client.user.setPresence({ game: { name: 'ei!help | Usa ese comando para saber usar el bot de Empire Islands!', type: 0 } });
 	const commandBody = message.content.slice(prefix.length);
   	const args = commandBody.split(' ');
   	const command = args.shift().toLowerCase();    
