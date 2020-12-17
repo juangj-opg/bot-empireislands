@@ -81,6 +81,7 @@ client.on("message", function(message) {
         .setDescription("Comete mis calzones.")
         .setTimestamp();
         message.channel.send(Calzon_Embed);
+      break;
       case "reglas":
          // Provide a menu with a channel, an author ID to let control the menu, and an array of menu pages.
         let reglas = new Menu(message.channel, message.author.id, [
