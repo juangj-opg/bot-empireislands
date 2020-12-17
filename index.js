@@ -62,6 +62,15 @@ client.on("message", function(message) {
         .setTimestamp();
         message.channel.send(Embed4);
       break;
+      case "nonox":
+      	const Embed10 = new Discord.MessageEmbed()
+        .setTitle("Empire Islands")
+        .setColor(0xFF8000)
+        .setThumbnail("https://i2.wp.com/empireislands.es/wp-content/uploads/2017/02/NonoxSoux.png?resize=300%2C300&ssl=1")
+        .setDescription("Comete mis calzones.")
+        .setTimestamp();
+        message.channel.send(Embed10);
+      break;
       case "launcher":
         const Embed5 = new Discord.MessageEmbed()
         .setTitle("Empire Islands")
@@ -72,15 +81,6 @@ client.on("message", function(message) {
         .addField("Technic No Premium", 'Launcher de Technic para los usuarios no premium.\nLink: [MEGA](https://mega.nz/file/Mh1CUARL#0bS9SN4O9mzU8vHkgXo6qC9XTgVUJ48IUE29HIS9wkE)')
         .setTimestamp();
         message.channel.send(Embed5);
-      break;
-      case "Nonox":
-      	const Calzon_Embed = new Discord.MessageEmbed()
-        .setTitle("Empire Islands")
-        .setColor(0xFF8000)
-        .setThumbnail("https://i2.wp.com/empireislands.es/wp-content/uploads/2017/02/NonoxSoux.png?resize=300%2C300&ssl=1")
-        .setDescription("Comete mis calzones.")
-        .setTimestamp();
-        message.channel.send(Calzon_Embed);
       break;
       case "reglas":
          // Provide a menu with a channel, an author ID to let control the menu, and an array of menu pages.
