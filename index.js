@@ -49,7 +49,7 @@ client.on("message", function(message) {
   			.setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
   			.setDescription("- Para buscar el pack, tienes que buscar \"Empire Islands\" en el launcher de Technic\n- Puedes descargar el launcher con ei!launcher\n\nActualizado del día 25/12/2020:")
   			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión: 1.12.2\n Nº de mods: 221 \nIP: sky.empireislands.es')
-  			.addField("Proximamente", 'Pack de ¿?.\nVersión: 1.12.2\n Nº de mods: 20 \nIP: Aún no disponible')
+  			.addField("Proximamente", 'Pack de ¿?.\nVersión: 1.12.2\n Nº de mods: 24 \nIP: Aún no disponible')
         	.setTimestamp();
   			message.channel.send(Embed3);
   		break;
