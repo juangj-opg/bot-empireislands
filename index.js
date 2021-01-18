@@ -47,10 +47,10 @@ client.on("message", function(message) {
   			.setTitle("Empire Islands")
   			.setColor(0xFF8000)
   			.setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-  			.setDescription("- Para buscar el pack, tienes que buscar \"Empire Islands\" en el launcher de Technic\n- Puedes descargar el launcher con ei!launcher\n\nActualizado del día 25/12/2020:")
+  			.setDescription("- Para buscar el pack, tienes que buscar \"Empire Islands\" en el launcher de Technic\n- Puedes descargar el launcher con ei!launcher\n\nActualizado del día 18/01/2021:")
   			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión: 1.12.2\n Nº de mods: 221 \nIP: sky.empireislands.es')
-  			.addField("Proximamente", 'Pack de ¿?.\nVersión: 1.12.2\n Nº de mods: 24 \nIP: Aún no disponible')
-        	.setTimestamp();
+  			.addField("Pixelmon", 'Pack de Pixelmon.\nVersión: 1.12.2\n Nº de mods: 31 \nIP: Interno en el pack.')
+        .setTimestamp();
   			message.channel.send(Embed3);
   		break;
       case "tienda":
@@ -58,8 +58,9 @@ client.on("message", function(message) {
         .setTitle("Empire Islands")
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-        .setDescription("Actualizado del día 08/12/2020:\nRecuerda que si vas a hacer un pago, hazlo dentro del servidor para evitar fallos.")
+        .setDescription("Actualizado del día 18/01/2021:\nRecuerda que si vas a hacer un pago, hazlo dentro del servidor para evitar fallos.")
         .addField("Skyblock", '3 Vips, 3€ / 5€ / 9€.\nLink: https://empskyislands.enjin.com/')
+        .addField("Pixelmon", 'Aún en construcción.')
         .setTimestamp();
         message.channel.send(Embed4);
       break;
@@ -264,6 +265,16 @@ client.on("message", function(message) {
               })
             })
           })
+      break;
+      case "pixelmon":
+        const EmbedPixelmon = new Discord.MessageEmbed()
+        .setTitle("Empire Islands")
+        .setColor(0xFF8000)
+        .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
+        .setDescription("Aún se encuentra en construccíón este apartado del bot.")
+        .addField("En construcción", 'En cnstrucción')
+        .setTimestamp();
+        message.channel.send(EmbedPixelmon);
       break;
   	} 
 });                                      
