@@ -47,9 +47,9 @@ client.on("message", function(message) {
   			.setTitle("Empire Islands")
   			.setColor(0xFF8000)
   			.setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
-  			.setDescription("- Para buscar el pack, tienes que buscar \"Empire Islands\" en el launcher de Technic\n- Puedes descargar el launcher con ei!launcher\n\nActualizado del día 18/01/2021:")
+  			.setDescription("- Para buscar el pack, tienes que buscar \"Empire Islands\" en el launcher de Technic\n- Puedes descargar el launcher con ei!launcher\n\nActualizado del día 08/04/2021:")
   			.addField("Skyblock", 'Pack de SkyFactory 4 con un par de mods adiccionales.\nVersión: 1.12.2\n Nº de mods: 221 \nIP: sky.empireislands.es')
-  			.addField("Pixelmon", 'Pack de Pixelmon.\nVersión: 1.12.2\n Nº de mods: 31 \nIP: Interno en el pack.')
+  			.addField("Pixelmon (Cerrado temporalmente)", 'Pack de Pixelmon.\nVersión: 1.12.2\n Nº de mods: 31 \nIP: Interno en el pack.')
         .setTimestamp();
   			message.channel.send(Embed3);
   		break;
@@ -272,7 +272,7 @@ client.on("message", function(message) {
         .setColor(0xFF8000)
         .setThumbnail("https://empireislands.es/wp-content/uploads/revslider/empire/Empirelog4opng.png")
         .setDescription("Aún se encuentra en construccíón este apartado del bot.")
-        .addField("En construcción", 'En cnstrucción')
+        .addField("En construcción", 'En construcción')
         .setTimestamp();
         message.channel.send(EmbedPixelmon);
       break;
